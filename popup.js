@@ -85,9 +85,13 @@ chrome.runtime.onMessage.addListener(function (message) {
 //     event.stopPropagation();
 //   });
 
-
-
 $("#login").click(function () {
-  var email = $
-  var password =
-})
+  var email = $("#email").val();
+  var password = $("password").val();
+
+  $.post("http://www.jobjob.pro/users/sign_in", {
+    email: email,
+    password: password,
+  }),
+    function (response) {};
+});
