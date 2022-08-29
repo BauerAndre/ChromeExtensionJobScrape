@@ -85,13 +85,51 @@ chrome.runtime.onMessage.addListener(function (message) {
 //     event.stopPropagation();
 //   });
 
+chrome.runtime.onMessage.addListener(function (message) {
+  if (message.type == "m1") {
+    title = message.content;
+  }
+  if (message.type == "m2") {
+    company = message.content;
+  }
+  if (message.type == "m3") {
+    url = message.content;
+  }
+
+  // document.getElementById("pagetitle").innerHTML = message;
+});
+
+// event to on click submit
 $("#login").click(function () {
   var email = $("#email").val();
   var password = $("password").val();
 
+  // Making ajax call after receive
   $.post("http://www.jobjob.pro/users/sign_in", {
     email: email,
     password: password,
-  }),
-    function (response) {};
+  });
+  $.post("http://www.jobjob.pro/jobs", {
+    title: title,
+    company: company,
+    url: url,
+  });
 });
+
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+var myInit = {
+  method: "POST",
+  "Content-Type": "application/json",
+  "X-User-Email": email,
+  "X-User-Password": password,
+  job: { title: title, company: company, url: url },
+};
+
+fetch("localhost:3000/api/v1/jobs", myInit)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  });
