@@ -4,7 +4,7 @@ window.addEventListener("load", function (evt) {
     file: "payload.js",
   });
 });
-let job;
+var job;
 chrome.runtime.onMessage.addListener(function (message) {
   job = message;
   console.log(message);

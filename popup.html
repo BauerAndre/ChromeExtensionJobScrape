@@ -3,11 +3,12 @@
 
 <head>
 	<title>JobJob</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-  <div style="width: 300px;">
-  <h3>JobJob!</h1>
+  <div style="width: 200px; text-align: center; padding: 20px;">
+
     <div id="showSignIn">
       <h3>Sign in</h3>
       <form method="post" class="form-group" id="login-form">
@@ -18,14 +19,25 @@
         <p class="submit"><input type="submit" name="commit" value="Log In" id="login" class="special-button"></p>
       </form>
     </div>
-    <br>
-    <br>
-    <br>
+
     <!-- <p id='title'>This should change to the scraped title!</p>
     <p id='company'>This should change to the scraped company!</p>
     <p id='url'>This should change to the scraped url!</p> -->
-    <button id="send" >Send</button>
+    <p>Add this job to <strong>JobJob</strong></p>
+    <button id="send">&nbsp &nbsp Add Job &nbsp &nbsp   </button>
     <script src="popup.js"></script>
   </div>
+
+  <style>
+    #send {
+      background-color: #fafa37;
+      border: none;
+      transition-duration: 0.4s;
+    }
+    #send:hover {
+      background-color: #68E1FD;
+    }
+  </style>
+
   </body>
   </html>
