@@ -19,13 +19,17 @@
         <p class="submit"><input type="submit" name="commit" value="Log In" id="login" class="special-button"></p>
       </form>
     </div>
-
-    <!-- <p id='title'>This should change to the scraped title!</p>
-    <p id='company'>This should change to the scraped company!</p>
-    <p id='url'>This should change to the scraped url!</p> -->
-    <p>Add this job to <strong>JobJob</strong></p>
-    <button id="send">&nbsp &nbsp Add Job &nbsp &nbsp   </button>
-    <script src="popup.js"></script>
+      <div id="add-job">
+      <!-- <p id='title'>This should change to the scraped title!</p>
+      <p id='company'>This should change to the scraped company!</p>
+      <p id='url'>This should change to the scraped url!</p> -->
+      <p>Add this job to <strong>JobJob</strong></p>
+      <button id="send">&nbsp &nbsp Add Job &nbsp &nbsp   </button>
+      <script src="popup.js"></script>
+    </div>
+    <div>
+     <h4> Sent to your JobJob</h4>
+    </div>
   </div>
 
   <style>
@@ -36,6 +40,9 @@
     }
     #send:hover {
       background-color: #68E1FD;
+    }
+    h4{
+      display: none;
     }
   </style>
 

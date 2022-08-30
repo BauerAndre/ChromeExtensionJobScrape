@@ -25,8 +25,8 @@ function sendJob() {
         job: job,
       }),
     };
-
-    fetch("http://localhost:3000/api/v1/jobs", myInit)
+    // fetch("http://localhost:3000/api/v1/jobs", myInit)
+    fetch("http://www.jobjob.pro/api/v1/jobs", myInit)
       .then((response) => {
         return response.json();
       })
@@ -39,6 +39,13 @@ function sendJob() {
 
 document.getElementById("send").addEventListener("click", (event) => {
   //   console.log("inside event listener");
+  chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null, {
+    file: "payload.js",
+  });
+  const sender = document.getElementById("add-job");
+  const confirm = document.querySelector("h4");
+  sender.style.display = "none";
+  confirm.style.display = "inline";
   sendJob();
 });
 
@@ -53,7 +60,8 @@ function login() {
     body: JSON.stringify({ email: email, password: password }),
   };
 
-  fetch("http://localhost:3000/api/v1/auth/login", myInit)
+  // fetch("http://localhost:3000/api/v1/auth/login", myInit)
+  fetch("http://www.jobjob.pro/api/v1/auth/login", myInit)
     .then((response) => {
       return response.json();
     })
