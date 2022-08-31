@@ -18,7 +18,7 @@
         "storage"
     ],
 	"browser_action": {
-		"default_icon": "job-logo.png",
+		"default_icon": "jobjob_png.png",
 		"default_popup": "popup.html"
 	}
 }
