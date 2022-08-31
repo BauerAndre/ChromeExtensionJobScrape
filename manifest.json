@@ -4,7 +4,7 @@
 	"name": "JobJob",
 	"description": "A simple page-scraping extension for Chrome",
 	"version": "1.0",
-	"author": "Andre",
+	"author": "JobJobGroup",
 
 	"background": {
 		"scripts": ["popup.js"],
