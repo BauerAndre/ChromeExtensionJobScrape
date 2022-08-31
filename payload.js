@@ -7,6 +7,7 @@ chrome.runtime.sendMessage(
     company: document.querySelector(
       ".topcard__org-name-link, .jobs-unified-top-card__company-name"
     ).innerText,
+    logo_url: document.querySelector(".lazy-image").innerText,
   },
   function (response) {
     console.log(response);
