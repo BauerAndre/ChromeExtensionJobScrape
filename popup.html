@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div style="width: 200px; text-align: center; padding: 20px;">
+  <div style="width: 400px; text-align: center; padding: 20px;">
 
     <div id="showSignIn">
       <h3>Sign in</h3>
@@ -23,8 +23,23 @@
       <!-- <p id='title'>This should change to the scraped title!</p>
       <p id='company'>This should change to the scraped company!</p>
       <p id='url'>This should change to the scraped url!</p> -->
-      <p>Add this job to <strong>JobJob</strong></p>
-      <button id="send">&nbsp &nbsp Add Job &nbsp &nbsp   </button>
+
+
+
+      <div class="card-suggested-job mb-3">
+        <div class="card-suggested-job-infos gap-3">
+          <img class='mt-1 company-logo' id="logo_url">
+          <div class="m-0 t">
+            <p class="m-0 font-weight-bold" id="company"></p>
+            <p class="m-0 " style="opacity: 0.75;" id="title">
+          </div>
+        </div>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      </div>
+
+
+      <button id="send">&nbsp &nbsp Add to JobJob &nbsp &nbsp   </button>
       <script src="popup.js"></script>
     </div>
     <div>
@@ -40,6 +55,7 @@
       background-color: #fafa37;
       border: none;
       transition-duration: 0.4s;
+      padding: 10px;
     }
     #send:hover {
       background-color: #68E1FD;
@@ -48,6 +64,41 @@
       font-size: 16px;
       display: none;
     }
+
+    .card-suggested-job p {
+      text-align: left;
+      padding-left: 16px;
+    }
+
+
+    .card-suggested-job {
+  min-width: 280px;
+  height: 120px;
+  flex-grow: 1;
+  background: white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  display: flex;
+  position: relative;
+  border-radius: 4px;
+    }
+
+
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  padding: 4px;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 4px;
+}
+
+.card-suggested-job-infos {
+  padding: 16px;
+  margin-right: 32px;
+  display: flex;
+  align-items: start;
+}
   </style>
 
   </body>

@@ -8,6 +8,9 @@ var job;
 chrome.runtime.onMessage.addListener(function (message) {
   job = message;
   console.log(message);
+  document.getElementById("company").innerHTML = job.company;
+  document.getElementById("title").innerHTML = job.title;
+  document.getElementById("logo_url").src = job.logo_url;
 });
 
 function sendJob() {
