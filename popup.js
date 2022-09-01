@@ -38,7 +38,7 @@ function sendJob() {
 }
 
 document.getElementById("send").addEventListener("click", (event) => {
-  //   console.log("inside event listener");
+  console.log("inside event listener");
   chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null, {
     file: "payload.js",
   });
